@@ -1,0 +1,5 @@
+The aim of the game is to find all 8 matching geckos.
+To play the game, click once to turn over an initial card and click again to try to find a matching pair.
+If you find a match, both cards will remain turned over and no longer be clickable.
+If you don’t find a match, the cards will be hidden again and you can try again.
+The game is finished when all the pairs have been found.
