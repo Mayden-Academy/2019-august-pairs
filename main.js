@@ -19,9 +19,9 @@ document.querySelector('.newGame').addEventListener('click', function(e) {
 document.querySelector('.instructionsButton').addEventListener('click', function(e){
     let instructions = document.querySelector('.instructions')
     if (instructions.style.display == "none") {
-        instructions.style.display="block"
+        instructions.style.display = "block"
     } else {
-        instructions.style.display="none"
+        instructions.style.display = "none"
     }
 })
 
