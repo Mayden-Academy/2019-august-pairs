@@ -2,6 +2,9 @@ import "functions/displayImages.js"
 import "functions/shuffle.js"
 import "functions/gameStarted.js"
 
+game.cardArray = shuffle(game.cardArray)
+
+// Get cards from DOM and store them as a NodeList
 var cards = document.querySelectorAll('.card')
 
 //forEach loop that calls displayImage function when a card is clicked
