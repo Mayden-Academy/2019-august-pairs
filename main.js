@@ -1,3 +1,7 @@
+import "functions/displayImages.js"
+import "functions/shuffle.js"
+import "functions/gameStarted.js"
+
 var cards = document.querySelectorAll('.card')
 
 //forEach loop that calls displayImage function when a card is clicked
