@@ -1,3 +1,8 @@
+let game = {
+    cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
+}
+export {game}
+
 import "functions/displayImages.js"
 import "functions/shuffle.js"
 import "functions/gameStarted.js"
