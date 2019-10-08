@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.menu {
+    width: 100%;
+    overflow: auto;
+    height: 100px;
+    font-size: 2rem;
+}
+
+button {
+    float: left;
+    height: 80px;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.newGame {
+    color: red;
+}
+
+.score .timer {
+    float: left;
+}
+
+.instructions {
+    font-size: 1rem;
+    display: none;
+ }
+  
+.cardContainer {
+    width: 620px;
+    margin: 0 auto;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+.card {
+    float: left;
+    margin: 8px 16.5px;
+    width: 120px;
+    height: 180px;
+    background-image: url("images/cardBack.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid black;
+    border-radius: 10px;
+}
