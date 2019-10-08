@@ -2,13 +2,23 @@
     box-sizing: border-box;
 }
 
-.menu {
+html {
+    font-size: 12px;
+}
+
+.container {
+    margin: 0 auto;
     width: 80%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.menu {
+    width: 100%;
     overflow: auto;
     height: 100px;
 }
 
-.instructionsButton {
+button {
     float: left;
     margin: 15px;
     height: 80px;
@@ -17,10 +27,13 @@
 }
 
 .newGame {
-    float: left;
-    margin: 15px;
-    height: 80px;
-    width: 25%;
-    border: 2px solid black;
     color: red;
+}
+
+.score .timer {
+    float: left;
+}
+
+.instructions {
+    font-size: 1rem;
 }
