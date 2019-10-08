@@ -5,6 +5,6 @@ cards.forEach(function(card) {
     card.addEventListener('click', function(e){
         let cardId = e.id
         displayImage(game.cardArray, cardId)
-        e.stopImmediatePropagation()
+        e.stopImmediatePropagation
     })
 })
