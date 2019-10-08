@@ -8,16 +8,19 @@ game.cardArray = shuffle(game.cardArray)
 var cards = document.querySelectorAll('.card')
 
 document.querySelector('.newGame').addEventListener('click', function(e) {
-    e.stopImmediatePropagation()
-    document.querySelector('.cards').styles.backgroundImage="url('images/cardBack.jpg')"
+    e.stopPropagation
+    let cards = document.querySelectorAll('.card')
+    cards.forEach(function(card) {
+    	card.style.backgroundImage="url('images/cardBack.jpg')"
+    })
     game.cardArray = shuffle(game.cardArray)
 })
 
 //forEach loop that calls displayImage function when a card is clicked
 cards.forEach(function(card) {
-    card.addEventListener('click', function(e){
-        e.stopImmediatePropagation()
-        let cardId = e.id
+    card.addEventListener('click', function(event){
+        event.stopImmediatePropagation()
+        let cardId = event.target.id
         displayImage(game.cardArray, cardId)
     })
 })
