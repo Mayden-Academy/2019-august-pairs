@@ -1,3 +1,26 @@
 * {
     box-sizing: border-box;
 }
+
+.menu {
+    width: 80%;
+    overflow: auto;
+    height: 100px;
+}
+
+.instructionsButton {
+    float: left;
+    margin: 15px;
+    height: 80px;
+    width: 25%;
+    border: 2px solid black;
+}
+
+.newGame {
+    float: left;
+    margin: 15px;
+    height: 80px;
+    width: 25%;
+    border: 2px solid black;
+    color: red;
+}
