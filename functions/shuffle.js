@@ -21,6 +21,3 @@ function shuffle(arr) {
     }
     return arr;
 };
-
-// export shuffle function on it's own
-export { shuffle as default };
