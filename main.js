@@ -12,6 +12,15 @@ game.cardArray = shuffle(game.cardArray)
 // Get cards from DOM and store them as a NodeList
 var cards = document.querySelectorAll('.card')
 
+document.querySelector('.instructionsButton').addEventListener('click', function(e){
+    e.stopImmediatePropagation()
+    if (document.querySelector('.instructions').style.display == "none"){
+        document.querySelector('.instructions').style.display="block"
+    } else {
+        document.querySelector('.instructions').style.display="none"
+    }
+})
+
 //forEach loop that calls displayImage function when a card is clicked
 cards.forEach(function(card) {
     card.addEventListener('click', function(e){
@@ -20,3 +29,4 @@ cards.forEach(function(card) {
         displayImage(game.cardArray, cardId)
     })
 })
+
