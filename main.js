@@ -1,16 +1,21 @@
 let game = {
     cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
 }
-export {game}
+// export {game}
 
-import "functions/displayImages.js"
-import "functions/shuffle.js"
-import "functions/gameStarted.js"
+import {displayImages} from "functions/displayImages.js"
+import {shuffle} from "functions/shuffle.js"
 
 game.cardArray = shuffle(game.cardArray)
 
 // Get cards from DOM and store them as a NodeList
 var cards = document.querySelectorAll('.card')
+
+document.querySelector('.newGame').addEventListener('click', function(e) {
+    e.stopImmediatePropagation()
+    document.querySelector('.cards').styles.backgroundImage="url('images/cardBack.jpg')"
+    game.cardArray = shuffle(game.cardArray)
+})
 
 //forEach loop that calls displayImage function when a card is clicked
 cards.forEach(function(card) {
