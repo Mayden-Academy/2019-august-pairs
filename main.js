@@ -13,6 +13,15 @@ document.querySelector('.newGame').addEventListener('click', function(e) {
     game.cardArray = shuffle(game.cardArray)
 })
 
+document.querySelector('.instructionsButton').addEventListener('click', function(e){
+    var instructions = document.querySelector('.instructions')
+    if (instructions.style.display == "none") {
+        instructions.style.display="block"
+    } else {
+        instructions.style.display="none"
+    }
+})
+
 //forEach loop that calls displayImage function when a card is clicked
 cards.forEach(function(card) {
     card.addEventListener('click', function(e){
