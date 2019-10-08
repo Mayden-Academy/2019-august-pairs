@@ -1,5 +1,5 @@
 .cardContainer {
-    width: 456px;
+    width: 620px;
     margin: 0 auto;
     border: 1px solid black;
     overflow: auto;
@@ -8,9 +8,9 @@
 
 .card {
     float: left;
-    margin: 16px;
-    width: 80px;
-    height: 122px;
+    margin: 8px 16.5px;
+    width: 120px;
+    height: 180px;
     background-image: url("images/cardBack.jpg");
     background-position: center;
     background-repeat: no-repeat;
