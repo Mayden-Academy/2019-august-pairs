@@ -1,11 +1,9 @@
 let game = {
-    cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
+    cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
+    cards: document.querySelectorAll('.card')
 }
 
 game.cardArray = shuffle(game.cardArray)
-
-// Get cards from DOM and store them as a NodeList
-var cards = document.querySelectorAll('.card')
 
 document.querySelector('.newGame').addEventListener('click', function(e) {
     e.stopPropagation
@@ -20,17 +18,17 @@ document.querySelector('.newGame').addEventListener('click', function(e) {
 document.querySelector('.instructionsButton').addEventListener('click', function(e){
     let instructions = document.querySelector('.instructions')
     if (instructions.style.display == "none") {
-        instructions.style.display="block"
+        instructions.style.display = "block"
     } else {
-        instructions.style.display="none"
+        instructions.style.display = "none"
     }
 })
 
 //forEach loop that calls displayImage function when a card is clicked
-cards.forEach(function(card) {
+game.cards.forEach(function(card) {
     card.addEventListener('click', function(event){
         event.stopImmediatePropagation()
-        let cardId = event.target.id
+        let cardId = this.id
         card.classList = "card"
         displayImage(game.cardArray, cardId)
     })
