@@ -30,6 +30,7 @@ function checkMatch(cardsArray, chosenCards) {
 
     if (deckCardOne === deckCardTwo){//yes
         //return a boolean value of true
+        game.cardsTurn = []
         disableCards(chosenCards)
         return true
     }else{//no
