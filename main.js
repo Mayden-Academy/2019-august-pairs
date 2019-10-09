@@ -20,10 +20,10 @@ document.querySelector('.newGame').addEventListener('click', function(e) {
 
 document.querySelector('.instructionsButton').addEventListener('click', function(e){
     let instructions = document.querySelector('.instructions')
-    if (instructions.classList = "instructions hidden") {
-        instructions.classList = "instructions visible"
+    if (instructions.classList.contains("hidden")) {
+        instructions.classList.remove("hidden")
     } else {
-        instructions.classList = "instructions hidden"
+        instructions.classList.add("hidden")
     }
 })
 
