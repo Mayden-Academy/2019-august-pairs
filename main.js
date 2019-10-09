@@ -9,7 +9,7 @@ document.querySelector('.newGame').addEventListener('click', function(e) {
     e.stopPropagation
     
     game.cards.forEach(function(card) {
-    	card.style.backgroundImage="url('images/cardBack.jpg')"
+    	card.style.backgroundImage = "url('images/cardBack.jpg')"
     })
     game.cardArray = shuffle(game.cardArray)
 })
