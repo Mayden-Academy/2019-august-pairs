@@ -1,5 +1,5 @@
 /**
- * Remove the click event listeners from the matchedCards
+ * Remove the click event listeners from the matchedCards.js
  */
 
 function matchedCards(){
