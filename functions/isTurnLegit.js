@@ -16,19 +16,14 @@ function isTurnLegit(theCard) {
 
     //check if the theCard is in the cardsTurn property of the game object
     if (!game.cardsTurn.includes(theCard)) {
-
         //add the theCard to the cardsTurn property
         game.cardsTurn.push(theCard)
-
         //increment the clicks property of the game object by one
         game.clicks++
-
         //check if the clicks property of the game object is equal to two
         if (game.clicks === 2) {//yes
-
             //reset clicks property of the game object to zero
             game.clicks = 0
-
             //call the checkMatch function
             checkMatch()
 
