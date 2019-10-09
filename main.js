@@ -32,6 +32,7 @@ game.cards.forEach(function(card) {
         let cardId = this.id
         card.classList = "card"
         displayImage(game.cardArray, cardId)
+        isTurnLegit(this.id)
     })
 })
 
