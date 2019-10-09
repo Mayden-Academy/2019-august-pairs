@@ -11,7 +11,8 @@ document.querySelector('.newGame').addEventListener('click', function(e) {
     e.stopPropagation
     let cards = document.querySelectorAll('.card')
     cards.forEach(function(card) {
-    	card.style.backgroundImage="url('images/cardBack.jpg')"
+        card.style = ""
+    	card.classList = "card card-back"
     })
     game.cardArray = shuffle(game.cardArray)
 })
@@ -30,6 +31,7 @@ cards.forEach(function(card) {
     card.addEventListener('click', function(event){
         event.stopImmediatePropagation()
         let cardId = event.target.id
+        card.classList = "card"
         displayImage(game.cardArray, cardId)
     })
 })
