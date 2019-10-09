@@ -15,15 +15,19 @@ game.cardArray = shuffle(game.cardArray)
 
 document.querySelector('.newGame').addEventListener('click', function(e) {
     e.stopPropagation
+    if (game.matchedCards.length < 16) {
         if (game.timer > 0) {
             game.timer = 0
             document.querySelector('.timer').textContent = 'Timer: 0'
         } else {
-             if (timerSwitch === 0){
+            if (timerSwitch === 0) {
                 game.timerObject()
                 timerSwitch = 1
             }
         }
+    } else {
+        clearInterval(game.timerObject)
+    }
 
     let cards = document.querySelectorAll('.card')
     cards.forEach(function(card) {
