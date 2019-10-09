@@ -37,15 +37,3 @@ function isTurnLegit(theCard) {
     }
 
 }
-
-// testing
-
-let game = {}
-
-game.cardsTurn = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-game.clicks = 1
-isTurnLegit(0)
-isTurnLegit(1)
-
-console.log(game.cardsTurn)
-console.log(game.clicks)
