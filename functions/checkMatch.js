@@ -32,6 +32,8 @@ function checkMatch(cardsArray, chosenCards) {
         //return a boolean value of true
         game.cardsTurn = []
         disableCards(chosenCards)
+        //Adds a CSS style to a matched pair.
+        game.matchedCards.style = "matched"
         return true
     }else{//no
         //return a boolean value of false
