@@ -33,11 +33,6 @@ button {
 .score .timer {
     float: left;
 }
-
-.instructions {
-    font-size: 1rem;
-    display: none;
- }
   
 .cardContainer {
     width: 620px;
