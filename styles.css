@@ -51,10 +51,13 @@ button {
     margin: 8px 16.5px;
     width: 120px;
     height: 180px;
-    background-image: url("images/cardBack.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.card-back {
+    background-image: url("images/cardBack.jpg");
 }

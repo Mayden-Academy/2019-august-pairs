@@ -7,9 +7,10 @@ game.cardArray = shuffle(game.cardArray)
 
 document.querySelector('.newGame').addEventListener('click', function(e) {
     e.stopPropagation
-    
-    game.cards.forEach(function(card) {
-    	card.style.backgroundImage = "url('images/cardBack.jpg')"
+    let cards = document.querySelectorAll('.card')
+    cards.forEach(function(card) {
+        card.style = ""
+    	card.classList = "card card-back"
     })
     game.cardArray = shuffle(game.cardArray)
 })
@@ -28,6 +29,7 @@ game.cards.forEach(function(card) {
     card.addEventListener('click', function(event){
         event.stopImmediatePropagation()
         let cardId = this.id
+        card.classList = "card"
         displayImage(game.cardArray, cardId)
     })
 })
