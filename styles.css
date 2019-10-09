@@ -56,3 +56,7 @@ button {
 .card-back {
     background-image: url("images/cardBack.jpg");
 }
+
+.matched {
+    border: lawngreen solid 3px;
+}

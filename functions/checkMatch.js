@@ -34,6 +34,8 @@ function checkMatch() {
         game.matchedCards.push(chosenCards[0])
         game.matchedCards.push(chosenCards[1])
         disableCards(chosenCards)
+        //Adds a CSS style to a matched pair.
+        game.matchedCards.classList += " matched"
         return true
     }else{//no
         //return a boolean value of false
