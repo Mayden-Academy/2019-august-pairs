@@ -37,10 +37,6 @@ button {
 .hidden {
     display: none;
 }
-
-.visible {
-    display: block;
-}
   
 .cardContainer {
     width: 620px;
