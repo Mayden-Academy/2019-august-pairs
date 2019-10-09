@@ -30,7 +30,8 @@ function checkMatch(cardsArray, chosenCards) {
 
     if (deckCardOne === deckCardTwo){//yes
         //return a boolean value of true
-        return true;
+        disableCards(chosenCards)
+        return true
     }else{//no
         //return a boolean value of false
         return false;
