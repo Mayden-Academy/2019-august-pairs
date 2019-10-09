@@ -1,23 +1,21 @@
+/** check if two cards match **/
+/* This function:
+*       1. receives an array of all of the card's locations
+*       2. receives an array of chosen card locations
+*       3. uses the values in the chosen card array to determine which locations to check in the cards array
+*       4. gets the values stored in those locations in the card array
+*       5. checks if the two values in the card array match
+*       6. returns true if both match
+*       7. returns false if they do not match
+*
+* @param - ARRAY - all 16 x card locations
+*
+* @param - ARRAY - chosen 2 x card location
+*
+* @return - BOOLEAN - do the cards match Y/N
+*
+* */
 function checkMatch(cardsArray, chosenCards) {
-    /** check if two cards match **/
-    /* This function:
-    *       1. receives an array of all of the card's locations
-    *       2. receives an array of chosen card locations
-    *       3. uses the values in the chosen card array to determine which locations to check in the cards array
-    *       4. gets the values stored in those locations in the card array
-    *       5. checks if the two values in the card array match
-    *       6. returns true if both match
-    *       7. returns false if they do not match
-    *
-    * @param - ARRAY - all 16 x card locations
-    *
-    * @param - ARRAY - chosen 2 x card location
-    *
-    * @return - BOOLEAN - do the cards match Y/N
-    *
-    * */
-
-
     //pick a random card from the array
     //get the value of the first chosenCard and use it to decide the position to check in the cardsArray and store the result in a variable
     var deckCardOne = cardsArray[chosenCards[0]];
@@ -31,6 +29,10 @@ function checkMatch(cardsArray, chosenCards) {
     if (deckCardOne === deckCardTwo){//yes
         //return a boolean value of true
         game.cardsTurn = []
+        //adding matched cards to game.matchedCards
+        if(game.matchedCards.length == 16) {
+            alert("Geckcellent work my friend! Wanna geckgo again?")
+        }
         disableCards(chosenCards)
         return true
     }else{//no
