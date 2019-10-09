@@ -1,9 +1,7 @@
 let game = {
     cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
     cards: document.querySelectorAll('.card'),
-    matchedCards: [],
-    cardsTurn: [],
-    clicks: 0
+    matchedCards: []
 }
 
 game.cardArray = shuffle(game.cardArray)
@@ -28,13 +26,13 @@ document.querySelector('.instructionsButton').addEventListener('click', function
 })
 
 //forEach loop that calls displayImage function when a card is clicked
-game.cards.forEach(function(card, game) {
+game.cards.forEach(function(card) {
     card.addEventListener('click', function(event){
         event.stopImmediatePropagation()
         let cardId = this.id
         card.classList = "card"
-        displayImage(cardId)
-        isTurnLegit(cardId)
+        displayImage(game.cardArray, cardId)
+        isTurnLegit(this.id)
     })
 })
 
