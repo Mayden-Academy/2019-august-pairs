@@ -16,28 +16,17 @@
 *
 * */
 function checkMatch(cardsArray, chosenCards) {
-    //pick a random card from the array
-    //get the value of the first chosenCard and use it to decide the position to check in the cardsArray and store the result in a variable
     var deckCardOne = cardsArray[chosenCards[0]];
-
-    //picks a random card for the second card
-    //get the value of the first chosenCard and use it to decide the position to check in the cardsArray and store the result in a variable
     var deckCardTwo = cardsArray[chosenCards[1]];
-
-    //check if the two cards are strictly equal
-
-    if (deckCardOne === deckCardTwo){//yes
-        //return a boolean value of true
+    if (deckCardOne === deckCardTwo){
         game.cardsTurn = []
-        //adding matched cards to game.matchedCards
         if(game.matchedCards.length == 16) {
             alert("Geckcellent work my friend! Wanna geckgo again?")
         }
         disableCards(chosenCards)
         return true
-    }else{//no
-        //return a boolean value of false
+    }else{
         return false;
     }
-
 }
+
