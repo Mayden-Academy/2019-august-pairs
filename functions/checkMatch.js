@@ -1,4 +1,4 @@
-function checkMatch() {
+function checkMatch(cardsArray, chosenCards) {
     /** check if two cards match **/
     /* This function:
     *       1. receives an array of all of the card's locations
@@ -20,26 +20,23 @@ function checkMatch() {
 
     //pick a random card from the array
     //get the value of the first chosenCard and use it to decide the position to check in the cardsArray and store the result in a variable
-    var deckCardOne = game.cardsArray[(game.cardsTurn[0])];
+    var deckCardOne = cardsArray[chosenCards[0]];
 
     //picks a random card for the second card
     //get the value of the first chosenCard and use it to decide the position to check in the cardsArray and store the result in a variable
-    var deckCardTwo = game.cardsArray[(game.cardsTurn[1])];
+    var deckCardTwo = cardsArray[chosenCards[1]];
 
     //check if the two cards are strictly equal
 
     if (deckCardOne === deckCardTwo){//yes
         //return a boolean value of true
         game.cardsTurn = []
-        game.matchedCards.push(chosenCards[0])
-        game.matchedCards.push(chosenCards[1])
         disableCards(chosenCards)
         //Adds a CSS style to a matched pair.
         game.matchedCards.classList += " matched"
         return true
     }else{//no
         //return a boolean value of false
-        game.cardsTurn = []
         return false;
     }
 

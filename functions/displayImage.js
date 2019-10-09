@@ -12,7 +12,7 @@
 * @param - STRING - the location id of the chosen card
 *
 */
-function displayImage(id) {
-    document.getElementById(id).style.backgroundImage = "url('images/gecko" + game.cardArray[id] + ".jpg')"
+function displayImage(array, id) {
+    document.getElementById(id).style.backgroundImage = "url('images/gecko" + array[id] + ".jpg')"
 }
 

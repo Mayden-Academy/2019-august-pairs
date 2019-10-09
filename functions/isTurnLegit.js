@@ -13,15 +13,13 @@
 *
 * */
 function isTurnLegit(theCard) {
-    theCard = parseInt(theCard)
+
     //check if the theCard is in the cardsTurn property of the game object
-    console.log(theCard)
-    if (game.cardsTurn.includes(theCard) == false) {
+    if (!game.cardsTurn.includes(theCard)) {
         //add the theCard to the cardsTurn property
         game.cardsTurn.push(theCard)
         //increment the clicks property of the game object by one
         game.clicks++
-        console.log(game.clicks)
         //check if the clicks property of the game object is equal to two
         if (game.clicks === 2) {//yes
             //reset clicks property of the game object to zero
