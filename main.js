@@ -1,12 +1,26 @@
 let game = {
     cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
-    cards: document.querySelectorAll('.card')
+    cards: document.querySelectorAll('.card'),
+    matchedCards: [],
+    timer: 0,
+    timerObject: function (){setInterval(function () {
+        game.timer++
+        document.querySelector('.timer').textContent = 'Timer: ' + game.timer + 's'
+    }, 1000)}
 }
 
 game.cardArray = shuffle(game.cardArray)
 
 document.querySelector('.newGame').addEventListener('click', function(e) {
     e.stopPropagation
+    if (game.timer > 0){
+        game.timer = 0
+        document.querySelector('.timer').textContent = 'Timer: '
+} else {
+        game.timerObject()
+
+    }
+
     let cards = document.querySelectorAll('.card')
     cards.forEach(function(card) {
         card.style = ""
@@ -33,4 +47,6 @@ game.cards.forEach(function(card) {
         displayImage(game.cardArray, cardId)
     })
 })
+
+
 
