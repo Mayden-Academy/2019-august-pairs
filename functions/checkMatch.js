@@ -35,7 +35,7 @@ function checkMatch() {
             setTimeout(function () {
                 alert("Geckcellent work! Completed in " + game.timer + " seconds and " + game.turn + " turns. Want to geckgo again?")
             }, 500)
-                
+
             game.gameFinished = true
 
         }
