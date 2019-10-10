@@ -1,5 +1,3 @@
-
-
 let game = {
     // Stores image numbers for the 16 cards (cardImageArray)
     cardImageArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
@@ -15,23 +13,25 @@ let game = {
     timer: 0,
     timerSwitch: 0,
     gameFinished: false,
-    timerObject: function (){setInterval(function () {
-        if (game.gameFinished === false) {
-            game.timer++
-            document.querySelector('.timer').textContent = 'Timer: ' + game.timer + 's'
-        }
-    }, 1000)}
+    timerObject: function () {
+        setInterval(function () {
+            if (game.gameFinished === false) {
+                game.timer++
+                document.querySelector('.timer').textContent = 'Timer: ' + game.timer + 's'
+            }
+        }, 1000)
+    }
 }
 
-setInterval(function() {
-    document.querySelector("#newGameText").style.color = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," +  Math.floor(Math.random() * 255) + ")"
-},62)
+setInterval(function () {
+    document.querySelector("#newGameText").style.color = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")"
+}, 62)
 
 // Shuffles the image numbers
 game.cardImageArray = shuffle(game.cardImageArray)
 
 // Event listener on the new game button that will reset the game 
-document.querySelector(".newGameButton").addEventListener("click", function(e) {
+document.querySelector(".newGameButton").addEventListener("click", function (e) {
     e.stopPropagation
     document.querySelector('.timer').textContent = 'Timer: 0'
     document.querySelector(".cardContainer").classList.remove("hidden")
@@ -55,10 +55,10 @@ document.querySelector(".newGameButton").addEventListener("click", function(e) {
     game.clicks = 0
     game.cardsTurn = []
     game.turn = 0
-    document.querySelector('.turnNumber').textContent=game.turn
+    document.querySelector('.turnNumber').textContent = game.turn
 
     // Turn cards back over
-    game.cards.forEach(function(card) {
+    game.cards.forEach(function (card) {
         card.style = ""
         card.classList = "card card-back"
     })
@@ -69,7 +69,7 @@ document.querySelector(".newGameButton").addEventListener("click", function(e) {
 
 
 // Instructions button event listener
-document.querySelector(".instructionsButton").addEventListener("click", function(e) {
+document.querySelector(".instructionsButton").addEventListener("click", function (e) {
     let instructions = document.querySelector(".instructions")
     if (instructions.classList.contains("hidden")) {
         instructions.classList.remove("hidden")
@@ -80,7 +80,7 @@ document.querySelector(".instructionsButton").addEventListener("click", function
 
 //forEach loop that calls displayImage function when a card is clicked
 game.cards.forEach(function (card) {
-    card.addEventListener("click", function(event) {
+    card.addEventListener("click", function (event) {
         // Stops event listener affecting cards other than the clicked card
         event.stopImmediatePropagation()
         if (!(this.classList.contains("matched"))) {
@@ -93,7 +93,7 @@ game.cards.forEach(function (card) {
             displayImage(cardId)
             // Checks if card is valid for current turn
             isTurnLegit(cardId)
-            document.querySelector('.turnNumber').textContent=game.turn
+            document.querySelector('.turnNumber').textContent = game.turn
         }
     })
 })
