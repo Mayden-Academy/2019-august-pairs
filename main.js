@@ -31,10 +31,12 @@ document.querySelector('.instructionsButton').addEventListener('click', function
 game.cards.forEach(function(card) {
     card.addEventListener('click', function(event){
         event.stopImmediatePropagation()
-        let cardId = this.id
+        if(!(this.classList.contains('matched'))) {
+            let cardId = this.id
         card.classList = "card"
         displayImage(game.cardArray, cardId)
         isTurnLegit(cardId)
+        }        
     })
 })
 
