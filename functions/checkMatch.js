@@ -1,43 +1,39 @@
-function checkMatch(cardsArray, chosenCards) {
-    /** check if two cards match **/
-    /* This function:
-    *       1. receives an array of all of the card's locations
-    *       2. receives an array of chosen card locations
-    *       3. uses the values in the chosen card array to determine which locations to check in the cards array
-    *       4. gets the values stored in those locations in the card array
-    *       5. checks if the two values in the card array match
-    *       6. returns true if both match
-    *       7. returns false if they do not match
-    *
-    * @param - ARRAY - all 16 x card locations
-    *
-    * @param - ARRAY - chosen 2 x card location
-    *
-    * @return - BOOLEAN - do the cards match Y/N
-    *
-    * */
+function checkMatch() {
+    console.log("checkMatch running!")
+    // Getting the ID's of the cards from the turn cards array
+    card1ID = game.cardsTurn[0]
+    card2ID = game.cardsTurn[1]
 
 
-    //pick a random card from the array
-    //get the value of the first chosenCard and use it to decide the position to check in the cardsArray and store the result in a variable
-    var deckCardOne = cardsArray[chosenCards[0]];
+    // Getting the cards image numbers from the cards array
+    card1Image = game.cardArray[card1ID]
+    card2Image = game.cardArray[card2ID]
 
-    //picks a random card for the second card
-    //get the value of the first chosenCard and use it to decide the position to check in the cardsArray and store the result in a variable
-    var deckCardTwo = cardsArray[chosenCards[1]];
+    console.log(card1Image)
+    console.log(card2Image)
 
-    //check if the two cards are strictly equal
+    // Checking if the two cards images match
+    if (card1Image === card2Image) {
+           // Adds card ID's to the matched cards array
+           game.matchedCards.push(parseInt(card1ID), parseInt(card2ID))
+           console.log(game.matchedCards)
+           game.cardsTurn.forEach( function(card) {
+               document.getElementById(card).classList = "card matched"
+               // Remove event listener
+           })
 
-    if (deckCardOne === deckCardTwo){//yes
-        //return a boolean value of true
+           game.cardsTurn = []
+
+    } else {
+        console.log("no match")
+        game.cardsTurn.forEach( function(card) {
+            let clearCard = setTimeout(function() {
+                document.getElementById(card).style = ""
+            document.getElementById(card).classList = "card card-back"
+        }, 250)
+           })
+
         game.cardsTurn = []
-        disableCards(chosenCards)
-        //Adds a CSS style to a matched pair.
-        game.matchedCards.classList += " matched"
-        return true
-    }else{//no
-        //return a boolean value of false
-        return false;
     }
 
 }
