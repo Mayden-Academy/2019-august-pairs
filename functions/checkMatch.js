@@ -24,7 +24,6 @@ function checkMatch() {
         game.cardsTurn.forEach(function (card) {
             // Adds matched class to matching cards
             document.getElementById(card).classList = "card matched"
-            // Remove event listener
         })
         
     } else {
