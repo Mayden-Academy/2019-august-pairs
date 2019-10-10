@@ -12,6 +12,9 @@ function initialiseHardGame (){
     //override the display property of the .extraCardContainer from 'none' to 'block'
     document.querySelector(".extraCardContainer").style.display = "block"
 
+    //override the width property of the .cardContainer from '620' to '920'
+    document.querySelector(".cardContainer").style.width = "920px"
+
     //override the number of cards that the game will be using
     game.gameSizeAtStart = 32
 
