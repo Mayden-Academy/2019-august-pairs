@@ -36,6 +36,9 @@ document.querySelector(".newGameButton").addEventListener("click", function (e) 
     document.querySelector('.timer').textContent = 'Timer: 0'
     document.querySelector(".cardContainer").classList.remove("hidden")
     document.querySelector("#newGameText").classList.add("hidden")
+    document.querySelectorAll(".matched").forEach(function (card) {
+        card.style = ""
+    })
     if (game.matchedCards.length <= 16) {
         if (game.timer > 0) {
             game.timer = 0
@@ -49,6 +52,7 @@ document.querySelector(".newGameButton").addEventListener("click", function (e) 
     } else {
         clearInterval(game.timerObject)
     }
+})
 
     // Reset game state
     game.matchedCards = []
