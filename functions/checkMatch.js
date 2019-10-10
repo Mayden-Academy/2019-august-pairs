@@ -23,7 +23,7 @@ function checkMatch() {
 
         game.cardsTurn.forEach(function (card) {
             // Adds matched class to matching cards
-            document.getElementById(card).classList = "card matched"
+            document.getElementById(card).classList.add("matched")
         })
         
     } else {
@@ -33,7 +33,7 @@ function checkMatch() {
                 // Removes image from cards
                 document.getElementById(card).style = ""
                 // Set cards back on their back
-                document.getElementById(card).classList = "card card-back"
+                document.getElementById(card).classList.add("card-back")
             }, 250)
         })
     }
