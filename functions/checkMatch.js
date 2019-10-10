@@ -19,28 +19,29 @@ function checkMatch() {
     // Checking if the two cards images match
     if (card1Image === card2Image) {
         // Adds card ID's to the matched cards array
-        game.matchedCards.push(card1Id,card2Id)
+        game.matchedCards.push(card1Id, card2Id)
 
-        game.cardsTurn.forEach(function(card) {
+        game.cardsTurn.forEach(function (card) {
             // Adds matched class to matching cards
             document.getElementById(card).classList.add("matched")
         })
         if (game.matchedCards.length == 16) {
-                setInterval(function() {
-                    document.querySelectorAll(".matched").forEach(function(card) {
-                        card.style.borderColor = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," +  Math.floor(Math.random() * 255) + ")"
-                })},62)
-                setTimeout(function() {
-                    alert("Geckcellent work! Completed in " + game.timer + " seconds and " + game.turn +  " turns. Want to geckgo again?")
-                }, 500)
+            setInterval(function () {
+                document.querySelectorAll(".matched").forEach(function (card) {
+                    card.style.borderColor = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")"
+                })
+            }, 62)
+            setTimeout(function () {
+                alert("Geckcellent work! Completed in " + game.timer + " seconds and " + game.turn + " turns. Want to geckgo again?")
+            }, 500)
                 
             game.gameFinished = true
 
         }
     } else {
-        game.cardsTurn.forEach(function(card) {
+        game.cardsTurn.forEach(function (card) {
             // Adds delay to resetting cards
-            setTimeout(function() {
+            setTimeout(function () {
                 // Removes image from cards
                 document.getElementById(card).style = ""
                 // Set cards back on their back
