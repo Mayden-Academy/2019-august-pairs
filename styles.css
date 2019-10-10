@@ -30,7 +30,11 @@ button {
     text-align: center;
 }
 
-.newGameButton {
+.newGameButton-easy {
+    color: green;
+}
+
+.newGameButton-hard {
     color: red;
 }
 
@@ -42,7 +46,6 @@ button {
 .turnCounter {
     float: left;
     height: 80px;
-    width: 33%;
     border: 2px solid black;
     text-align: center;
     padding: 24px;
@@ -88,4 +91,12 @@ button {
 
 .hidden {
     display: none;
+}
+
+.extraCardContainer {
+    display: none;
+}
+
+.item {
+    width: 20%;
 }

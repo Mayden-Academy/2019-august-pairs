@@ -5,6 +5,9 @@
     <script type="text/javascript" src="functions/shuffle.js" defer></script>
     <script type="text/javascript" src="functions/isTurnLegit.js" defer></script>
     <script type="text/javascript" src="functions/checkMatch.js" defer></script>
+    <script type="text/javascript" src="functions/initialiseHardGame.js" defer></script>
+    <script type="text/javascript" src="functions/initialiseEasyGame.js" defer></script>
+    <script type="text/javascript" src="functions/resetGame.js" defer></script>
     <script type="text/javascript" src="main.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="normalize.css">
@@ -15,10 +18,11 @@
 <body>
 <div class="container">
     <div class="menu">
-        <button class="instructionsButton">How to Play</button>
-        <button class="newGameButton">New Game</button>
-        <button class="timer">Timer: 0</button>
-        <div class="turnCounter">Turns: <p class="turnNumber">0</p></div>
+        <button class="item instructionsButton">How to Play</button>
+        <button class="item newGameButton-easy">New Game (easy)</button>
+        <button class="item newGameButton-hard">New Game (hard)</button>
+        <button class="item timer">Timer: 0</button>
+        <div class="item turnCounter">Turns: <p class="turnNumber">0</p></div>
     </div>
 
     <div class="instructions hidden"><p>The aim of the game is to find all 8 matching geckos.</p>
@@ -46,6 +50,24 @@
         <div class="card card-back" id="13"></div>
         <div class="card card-back" id="14"></div>
         <div class="card card-back" id="15"></div>
+        <div class="extraCardContainer">
+            <div class="card card-back" id="16"></div>
+            <div class="card card-back" id="17"></div>
+            <div class="card card-back" id="18"></div>
+            <div class="card card-back" id="19"></div>
+            <div class="card card-back" id="20"></div>
+            <div class="card card-back" id="21"></div>
+            <div class="card card-back" id="22"></div>
+            <div class="card card-back" id="23"></div>
+            <div class="card card-back" id="24"></div>
+            <div class="card card-back" id="25"></div>
+            <div class="card card-back" id="26"></div>
+            <div class="card card-back" id="27"></div>
+            <div class="card card-back" id="28"></div>
+            <div class="card card-back" id="29"></div>
+            <div class="card card-back" id="30"></div>
+            <div class="card card-back" id="31"></div>
+        </div>
     </div>
 </div>
 </body>
