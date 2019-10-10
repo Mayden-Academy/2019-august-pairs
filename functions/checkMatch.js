@@ -9,26 +9,26 @@ function checkMatch() {
 
     // Checking if the two cards images match
     if (card1Image === card2Image) {
-           // Adds card ID's to the matched cards array
-           game.matchedCards.push(parseInt(card1Id), parseInt(card2Id))
+        // Adds card ID's to the matched cards array
+        game.matchedCards.push(parseInt(card1Id), parseInt(card2Id))
 
-           game.cardsTurn.forEach(function(card) {
-               // Adds matched class to matching cards
-               document.getElementById(card).classList = "card matched"
-               // Remove event listener
-           })
+        game.cardsTurn.forEach(function (card) {
+            // Adds matched class to matching cards
+            document.getElementById(card).classList = "card matched"
+            // Remove event listener
+        })
 
 
     } else {
-        game.cardsTurn.forEach(function(card) {
+        game.cardsTurn.forEach(function (card) {
             // Adds delay to resetting cards
-            setTimeout(function() {
+            setTimeout(function () {
                 // Removes image from cards
                 document.getElementById(card).style = ""
                 // Set cards back on their back
                 document.getElementById(card).classList = "card card-back"
-        }, 250)
-           })
+            }, 250)
+        })
     }
     // Resets carsTurn
     game.cardsTurn = []
