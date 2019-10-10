@@ -21,12 +21,12 @@ function checkMatch() {
         // Adds card ID's to the matched cards array
         game.matchedCards.push(card1Id,card2Id)
 
-        game.cardsTurn.forEach(function (card) {
+        game.cardsTurn.forEach(function(card) {
             // Adds matched class to matching cards
-            document.getElementById(card).classList = "card matched"
+            document.getElementById(card).add("card matched")
             // Remove event listener
             if (game.matchedCards.length == 16) {
-                setTimeout(function () {
+                setTimeout(function() {
                     alert("Geckcellent work! Want to geckgo again?")
                 }, 250)
             }
@@ -34,9 +34,9 @@ function checkMatch() {
         })
         
     } else {
-        game.cardsTurn.forEach(function (card) {
+        game.cardsTurn.forEach(function(card) {
             // Adds delay to resetting cards
-            setTimeout(function () {
+            setTimeout(function() {
                 // Removes image from cards
                 document.getElementById(card).style = ""
                 // Set cards back on their back
