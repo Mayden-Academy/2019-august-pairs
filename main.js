@@ -24,7 +24,7 @@ let game = {
 }
 
 // Shuffles the image numbers
-// game.cardImageArray = shuffle(game.cardImageArray)
+game.cardImageArray = shuffle(game.cardImageArray)
 
 // Event listener on the new game button that will reset the game 
 document.querySelector(".newGame").addEventListener("click", function(e) {
@@ -60,7 +60,7 @@ document.querySelector(".newGame").addEventListener("click", function(e) {
     })
 
     // Reshuffles images
-    // game.cardImageArray = shuffle(game.cardImageArray)
+    game.cardImageArray = shuffle(game.cardImageArray)
 })
 
 
