@@ -30,10 +30,6 @@ button {
     color: red;
 }
 
-.score .timer {
-    float: left;
-}
-
 .hidden {
     display: none;
 }
