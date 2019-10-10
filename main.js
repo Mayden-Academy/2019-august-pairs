@@ -11,6 +11,7 @@ let game = {
     clicks: 0,
     turn: 0,
     timer: 0,
+    cardWinningBorder: null,
     timerSwitch: false,
     gameFinished: false,
     timerObject: function () {
@@ -25,7 +26,7 @@ let game = {
 
 setInterval(function () {
     document.querySelector("#newGameText").style.color = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")"
-}, 62)
+}, 128)
 
 // Shuffles the image numbers
 game.cardImageArray = shuffle(game.cardImageArray)
@@ -36,6 +37,7 @@ document.querySelector(".newGameButton").addEventListener("click", function (e) 
     document.querySelector('.timer').textContent = 'Timer: 0'
     document.querySelector(".cardContainer").classList.remove("hidden")
     document.querySelector("#newGameText").classList.add("hidden")
+    clearInterval(game.cardWinningBorder)
     if (game.matchedCards.length <= 16) {
         if (game.timer > 0) {
             game.timer = 0
