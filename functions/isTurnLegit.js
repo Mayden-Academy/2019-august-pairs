@@ -9,10 +9,7 @@
 *       6. checks if the clicks property of the game object is equal to two
 *       7. resets clicks property of the game object to zero
 *       8. calls the checkMatch function
-*
-*
 * */
-
 function isTurnLegit(cardId) {
 
     //check if the theCard is in the cardsTurn property of the game object

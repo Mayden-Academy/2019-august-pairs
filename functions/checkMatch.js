@@ -6,13 +6,7 @@
 *       those card elements and removes event listener from them
 *      4. if not matching a delay is added to resetting cards, gecko image is removed and card-back is reinstated
 *      5. cardsTurn is reset to start a new turn
-*
-* @param - ARRAY - cardsTurn - stores the cards clicked in a turn
-*
-* @param - ARRAY - cardImageArray - stores the gecko images
-*
 */
-
 function checkMatch() {
     // Getting the ID's of the cards from the turn cards array
     card1Id = game.cardsTurn[0]
