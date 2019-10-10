@@ -51,15 +51,12 @@ button {
     float: left;
 }
 
-.hidden {
-    display: none;
-}
-
 .cardContainer {
     width: 620px;
     margin: 0 auto;
     border: 1px solid black;
     overflow: auto;
+    display: block;
 }
 
 .card {
@@ -80,4 +77,8 @@ button {
 
 .matched {
     border: lawngreen solid 3px;
+}
+
+.hidden {
+    display: none;
 }

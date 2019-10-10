@@ -29,10 +29,12 @@ let game = {
 // Event listener on the new game button that will reset the game 
 document.querySelector(".newGame").addEventListener("click", function(e) {
     e.stopPropagation
+    document.querySelector('.timer').textContent = 'Timer: 0'
+    document.querySelector(".cardContainer").classList.remove("hidden")
+    document.querySelector("#newGameText").classList.add("hidden")
     if (game.matchedCards.length <= 16) {
         if (game.timer > 0) {
             game.timer = 0
-            document.querySelector('.timer').textContent = 'Timer: 0'
             game.gameFinished = false
         } else {
             if (game.timerSwitch === 0) {
