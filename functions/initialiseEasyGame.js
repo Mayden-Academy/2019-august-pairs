@@ -7,7 +7,7 @@
 *   3. shuffle the array
 *
  */
-function initialiseEasyGame (){
+function initialiseEasyGame() {
 
     //override the display property of the .extraCardContainer from 'none' to 'block'
     document.querySelector(".extraCardContainer").style.display = "none"

@@ -24,7 +24,7 @@ function resetGame() {
     document.querySelector('.turnNumber').textContent = game.turn
 
     // Turn cards back over
-    game.cards.forEach(function (card) {
+    game.cards.forEach(function(card) {
         card.style = ""
         card.classList = "card card-back"
     })
