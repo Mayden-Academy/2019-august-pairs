@@ -29,8 +29,9 @@ function checkMatch() {
                 setTimeout(function () {
                     alert("Geckcellent work! Want to geckgo again?")
                 }, 250)
+                game.gameFinished = true
             }
-
+            
         })
         
     } else {

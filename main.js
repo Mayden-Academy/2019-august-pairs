@@ -1,4 +1,4 @@
-let timerSwitch = 0
+
 
 let game = {
     // Stores image numbers for the 16 cards (cardImageArray)
@@ -11,7 +11,16 @@ let game = {
     cardsTurn: [],
     // Stores the number of clicks in the current turn 0 - 2
     clicks: 0,
-    turn: 0
+    turn: 0,
+    timer: 0,
+    timerSwitch: 0,
+    gameFinished: false,
+    timerObject: function (){setInterval(function () {
+        if (game.gameFinished === false) {
+            game.timer++
+            document.querySelector('.timer').textContent = 'Timer: ' + game.timer + 's'
+        }
+    }, 1000)}
 }
 
 // Shuffles the image numbers
@@ -25,9 +34,9 @@ document.querySelector(".newGame").addEventListener("click", function (e) {
             game.timer = 0
             document.querySelector('.timer').textContent = 'Timer: 0'
         } else {
-            if (timerSwitch === 0) {
+            if (game.timerSwitch === 0) {
                 game.timerObject()
-                timerSwitch = 1
+                game.timerSwitch = 1
             }
         }
     } else {
