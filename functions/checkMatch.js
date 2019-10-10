@@ -4,13 +4,9 @@ function checkMatch() {
     card1ID = game.cardsTurn[0]
     card2ID = game.cardsTurn[1]
 
-
     // Getting the cards image numbers from the cards array
     card1Image = game.cardArray[card1ID]
     card2Image = game.cardArray[card2ID]
-
-    console.log(card1Image)
-    console.log(card2Image)
 
     // Checking if the two cards images match
     if (card1Image === card2Image) {
@@ -18,21 +14,26 @@ function checkMatch() {
            game.matchedCards.push(parseInt(card1ID), parseInt(card2ID))
            console.log(game.matchedCards)
            game.cardsTurn.forEach( function(card) {
+               // Adds matched class to matching cards
                document.getElementById(card).classList = "card matched"
                // Remove event listener
            })
 
+           // Resets carsTurn
            game.cardsTurn = []
 
     } else {
-        console.log("no match")
         game.cardsTurn.forEach( function(card) {
-            let clearCard = setTimeout(function() {
+            // Adds delay to resetting cards
+            setTimeout(function() {
+                // Removes image from cards
                 document.getElementById(card).style = ""
-            document.getElementById(card).classList = "card card-back"
+                // Set cards back on their back
+                document.getElementById(card).classList = "card card-back"
         }, 250)
            })
 
+        // Resets carsTurn
         game.cardsTurn = []
     }
 

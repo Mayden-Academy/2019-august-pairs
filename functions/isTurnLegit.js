@@ -20,12 +20,10 @@ function isTurnLegit(theCard) {
         game.cardsTurn.push(theCard)
         //increment the clicks property of the game object by one
         game.clicks++
-
-        console.log("Click: " + game.clicks)
         //check if the clicks property of the game object is equal to two
         if (game.clicks === 2) {//yes
 
-            //reset clicks property of the game object to zero
+            //reset clicks property of the game object to zero if turn over
             game.clicks = 0
             //call the checkMatch function
             checkMatch()
