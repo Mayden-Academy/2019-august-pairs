@@ -37,7 +37,7 @@ button {
 .instructions {
     font-size: 1rem;
     display: block;
- }
+}
 
 .turnCounter {
     float: left;
@@ -47,6 +47,7 @@ button {
     text-align: center;
     padding: 24px;
 }
+
 .turnCounter p {
     display: inline;
 }
@@ -74,7 +75,7 @@ button {
     border: 1px solid black;
     border-radius: 10px;
     transform-style: preserve-3d;
-    transition: all 0.750s ease;
+    transition: transform 0.750s ease;
 }
 
 .card-back {
