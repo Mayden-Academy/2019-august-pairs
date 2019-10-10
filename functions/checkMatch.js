@@ -30,6 +30,7 @@ function checkMatch() {
                     alert("Geckcellent work! Want to geckgo again?")
                 }, 250)
             }
+
         })
         
     } else {
@@ -39,7 +40,7 @@ function checkMatch() {
                 // Removes image from cards
                 document.getElementById(card).style = ""
                 // Set cards back on their back
-                document.getElementById(card).classList = "card card-back"
+                document.getElementById(card).classList.add("card-back")
             }, 250)
         })
     }
