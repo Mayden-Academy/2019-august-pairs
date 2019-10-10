@@ -32,7 +32,7 @@ button {
 
 .instructions {
     font-size: 1rem;
-    display: none;
+    display: block;
  }
 
 .turnCounter {
