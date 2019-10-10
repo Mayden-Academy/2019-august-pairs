@@ -29,6 +29,6 @@ function checkMatch() {
             }, 250)
         })
     }
-    // Resets carsTurn
+    // Resets cardsTurn
     game.cardsTurn = []
 }
