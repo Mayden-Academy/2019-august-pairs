@@ -24,15 +24,16 @@ let game = {
 }
 
 // Shuffles the image numbers
-game.cardImageArray = shuffle(game.cardImageArray)
+// game.cardImageArray = shuffle(game.cardImageArray)
 
 // Event listener on the new game button that will reset the game 
 document.querySelector(".newGame").addEventListener("click", function (e) {
     e.stopPropagation
-    if (game.matchedCards.length < 16) {
+    if (game.matchedCards.length <= 16) {
         if (game.timer > 0) {
             game.timer = 0
             document.querySelector('.timer').textContent = 'Timer: 0'
+            game.gameFinished = false
         } else {
             if (game.timerSwitch === 0) {
                 game.timerObject()
@@ -55,7 +56,7 @@ document.querySelector(".newGame").addEventListener("click", function (e) {
     })
 
     // Reshuffles images
-    game.cardImageArray = shuffle(game.cardImageArray)
+    // game.cardImageArray = shuffle(game.cardImageArray)
 })
 
 
