@@ -23,9 +23,9 @@ let game = {
     }
 }
 
-setInterval(function() {
-    document.querySelector("#newGameText").style.color = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," +  Math.floor(Math.random() * 255) + ")"
-},128)
+setInterval(function () {
+    document.querySelector("#newGameText").style.color = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")"
+}, 128)
 
 // Shuffles the image numbers
 game.cardImageArray = shuffle(game.cardImageArray)
