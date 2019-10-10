@@ -13,6 +13,7 @@ let game = {
     //defines the number of cards that the game will be using
     gameSizeAtStart: 16,
     timer: 0,
+    cardWinningBorder: null,
     timerSwitch: false,
     gameFinished: false,
     timerObject: function () {
@@ -27,7 +28,7 @@ let game = {
 
 setInterval(function () {
     document.querySelector("#newGameText").style.color = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")"
-}, 62)
+}, 128)
 
 // Shuffles the image numbers
 game.cardImageArray = shuffle(game.cardImageArray)

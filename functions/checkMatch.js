@@ -27,7 +27,7 @@ function checkMatch() {
         })
         if (game.matchedCards.length == game.gameSizeAtStart) {
 
-            setInterval(function () {
+            game.cardWinningBorder = setInterval(function () {
                 document.querySelectorAll(".matched").forEach(function (card) {
                     card.style.borderColor = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")"
                 })
