@@ -22,18 +22,22 @@ html {
 button {
     float: left;
     height: 80px;
-    width: 33%;
+    width: 20%;
     border: 2px solid black;
 }
 
-.newGame {
+#newGameText {
+    text-align: center;
+}
+
+.newGameButton {
     color: red;
 }
 
 .instructions {
     font-size: 1rem;
     display: block;
- }
+}
 
 .turnCounter {
     float: left;
@@ -43,6 +47,7 @@ button {
     text-align: center;
     padding: 24px;
 }
+
 .turnCounter p {
     display: inline;
 }
@@ -51,15 +56,12 @@ button {
     float: left;
 }
 
-.hidden {
-    display: none;
-}
-
 .cardContainer {
     width: 620px;
     margin: 0 auto;
     border: 1px solid black;
     overflow: auto;
+    display: block;
 }
 
 .card {
@@ -72,6 +74,8 @@ button {
     background-size: contain;
     border: 1px solid black;
     border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: transform 0.750s ease;
 }
 
 .card-back {
@@ -79,5 +83,9 @@ button {
 }
 
 .matched {
-    border: lawngreen solid 3px;
+    border: lawngreen solid 5px;
+}
+
+.hidden {
+    display: none;
 }
