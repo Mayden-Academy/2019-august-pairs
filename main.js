@@ -13,9 +13,9 @@ let game = {
     clicks: 0,
     turn: 0,
     timer: 0,
-    timerSwitch: 0,
+    timerSwitch: false,
     gameFinished: false,
-    timerObject: function (){setInterval(function () {
+    timerObject: function() {setInterval(function () {
         if (game.gameFinished === false) {
             game.timer++
             document.querySelector('.timer').textContent = 'Timer: ' + game.timer + 's'
@@ -41,9 +41,9 @@ document.querySelector(".newGameButton").addEventListener("click", function(e) {
             game.timer = 0
             game.gameFinished = false
         } else {
-            if (game.timerSwitch === 0) {
+            if (game.timerSwitch === false) {
                 game.timerObject()
-                game.timerSwitch = 1
+                game.timerSwitch === true
             }
         }
     } else {
