@@ -11,6 +11,8 @@ let game = {
     clicks: 0,
     turn: 0,
     timer: 0,
+    //defines the number of cards that the game will be using
+    gameSizeAtStart: 16,
     timerSwitch: false,
     gameFinished: false,
     timerObject: function () {
@@ -98,5 +100,5 @@ game.cards.forEach(function (card) {
     })
 })
 
-
-
+//initialise hard mode
+initialiseHardGame ()
