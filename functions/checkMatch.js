@@ -31,7 +31,7 @@ function checkMatch() {
                 document.querySelectorAll(".matched").forEach(function (card) {
                     card.style.borderColor = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + ")"
                 })
-            }, 62)
+            }, 100)
             setTimeout(function () {
                 alert("Geckcellent work! Completed in " + game.timer + " seconds and " + game.turn + " turns. Want to geckgo again?")
             }, 500)
