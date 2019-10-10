@@ -2,7 +2,7 @@ let game = {
     // Stores image numbers for the 16 cards (cardImageArray)
     cardImageArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
     // Node list of all the card elements
-    cards: document.querySelectorAll('.card'),
+    cards: document.querySelectorAll(".card"),
     // Array of the ID's of cards that have been matched
     matchedCards: [],
     // Stores the card ID's of the cards active in the current turn
@@ -15,7 +15,7 @@ let game = {
 game.cardImageArray = shuffle(game.cardImageArray)
 
 // Event listener on the new game button that will reset the game 
-document.querySelector('.newGame').addEventListener('click', function (e) {
+document.querySelector('.newGame').addEventListener("click", function (e) {
     e.stopPropagation
 
     // Reset game state
@@ -35,8 +35,8 @@ document.querySelector('.newGame').addEventListener('click', function (e) {
 
 
 // Instructions button event listener
-document.querySelector('.instructionsButton').addEventListener('click', function (e) {
-    let instructions = document.querySelector('.instructions')
+document.querySelector('.instructionsButton').addEventListener("click", function (e) {
+    let instructions = document.querySelector(".instructions")
     if (instructions.classList.contains("hidden")) {
         instructions.classList.remove("hidden")
     } else {
@@ -46,7 +46,7 @@ document.querySelector('.instructionsButton').addEventListener('click', function
 
 //forEach loop that calls displayImage function when a card is clicked
 game.cards.forEach(function (card) {
-    card.addEventListener('click', function (event) {
+    card.addEventListener("click", function (event) {
         // Stops event listener affecting cards other than the clicked card
         event.stopImmediatePropagation()
         if (!(this.classList.contains("matched"))) {
