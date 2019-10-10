@@ -17,8 +17,7 @@ function checkMatch() {
             document.getElementById(card).classList = "card matched"
             // Remove event listener
         })
-
-
+        
     } else {
         game.cardsTurn.forEach(function (card) {
             // Adds delay to resetting cards
