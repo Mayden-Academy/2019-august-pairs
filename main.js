@@ -99,6 +99,3 @@ game.cards.forEach(function (card) {
         }
     })
 })
-
-//initialise hard mode
-initialiseHardGame ()
