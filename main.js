@@ -24,6 +24,7 @@ document.querySelector(".newGame").addEventListener("click", function(e) {
     game.clicks = 0
     game.cardsTurn = []
     game.turn = 0
+    document.querySelector('.turnNumber').textContent=game.turn
 
     // Turn cards back over
     game.cards.forEach(function(card) {

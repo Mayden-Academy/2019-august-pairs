@@ -23,15 +23,16 @@ function checkMatch() {
 
         game.cardsTurn.forEach(function(card) {
             // Adds matched class to matching cards
-            document.getElementById(card).add("card matched")
+            document.getElementById(card).classList.add("matched")
             // Remove event listener
-            if (game.matchedCards.length == 16) {
+            
+        })
+
+        if (game.matchedCards.length == 16) {
                 setTimeout(function() {
                     alert("Geckcellent work! Want to geckgo again?")
-                }, 250)
+                }, 2)
             }
-
-        })
         
     } else {
         game.cardsTurn.forEach(function(card) {
