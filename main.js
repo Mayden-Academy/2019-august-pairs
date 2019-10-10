@@ -52,7 +52,6 @@ document.querySelector(".newGameButton").addEventListener("click", function (e) 
     } else {
         clearInterval(game.timerObject)
     }
-})
 
     // Reset game state
     game.matchedCards = []
