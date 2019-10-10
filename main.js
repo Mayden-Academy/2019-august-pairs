@@ -1,5 +1,5 @@
 let game = {
-    // Stores image numbers for the 16 cards
+    // Stores image numbers for the 16 cards (cardImageArray)
     cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
     // Node list of all the card elements
     cards: document.querySelectorAll('.card'),
@@ -24,8 +24,7 @@ document.querySelector('.newGame').addEventListener('click', function(e) {
     game.cardsTurn = []
 
     // Turn cards back over
-    let cards = document.querySelectorAll('.card')
-    cards.forEach(function(card) {
+    game.cards.forEach(function(card) {
         card.style = ""
     	card.classList = "card card-back"
     })
@@ -50,13 +49,13 @@ game.cards.forEach(function(card) {
     card.addEventListener('click', function(event){
         // Stops event listener affecting cards other than the clicked card
         event.stopImmediatePropagation()
-        if(!(this.classList.contains('matched'))) {
+        if(!(this.classList.contains("matched"))) {
             // ID of card clicked
             let cardId = this.id
             // Removes card back class
-            card.classList = "card"
+            card.classList.remove("card-back")
             // Displays cards image
-            displayImage(game.cardArray, cardId)
+            displayImage(cardId)
             // Checks if card is valid for current turn
             isTurnLegit(cardId)
         }        

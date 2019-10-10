@@ -12,12 +12,13 @@
 *
 *
 * */
-function isTurnLegit(theCard) {
+
+function isTurnLegit(cardId) {
 
     //check if the theCard is in the cardsTurn property of the game object
-    if (!game.cardsTurn.includes(theCard)) {
+    if (!game.cardsTurn.includes(cardId)) {
         //add the theCard to the cardsTurn property
-        game.cardsTurn.push(theCard)
+        game.cardsTurn.push(cardId)
         //increment the clicks property of the game object by one
         game.clicks++
         //check if the clicks property of the game object is equal to two
@@ -27,9 +28,6 @@ function isTurnLegit(theCard) {
             game.clicks = 0
             //call the checkMatch function
             checkMatch()
-
         }
-
     }
-
 }
