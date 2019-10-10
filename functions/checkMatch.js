@@ -1,5 +1,4 @@
 function checkMatch() {
-    console.log("checkMatch running!")
     // Getting the ID's of the cards from the turn cards array
     card1ID = game.cardsTurn[0]
     card2ID = game.cardsTurn[1]
@@ -12,7 +11,6 @@ function checkMatch() {
     if (card1Image === card2Image) {
            // Adds card ID's to the matched cards array
            game.matchedCards.push(parseInt(card1ID), parseInt(card2ID))
-           console.log(game.matchedCards)
            game.cardsTurn.forEach( function(card) {
                // Adds matched class to matching cards
                document.getElementById(card).classList = "card matched"
