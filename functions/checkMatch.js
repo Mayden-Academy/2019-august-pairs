@@ -29,7 +29,7 @@ function checkMatch() {
                 setInterval(function() {
                     document.querySelectorAll(".matched").forEach(function(card) {
                         card.style.borderColor = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," +  Math.floor(Math.random() * 255) + ")"
-                })},62)
+                })},100)
                 setTimeout(function() {
                     alert("Geckcellent work! Completed in " + game.timer + " seconds and " + game.turn +  " turns. Want to geckgo again?")
                 }, 500)
@@ -45,7 +45,7 @@ function checkMatch() {
                 document.getElementById(card).style = ""
                 // Set cards back on their back
                 document.getElementById(card).classList.add("card-back")
-            }, 250)
+            }, 800)
         })
     }
     // Resets cardsTurn

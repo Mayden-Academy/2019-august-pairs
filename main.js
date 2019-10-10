@@ -87,6 +87,7 @@ game.cards.forEach(function (card) {
             // ID of card clicked
             let cardId = this.id
             // Removes card back class
+            document.getElementById(cardId).style.transform = "rotateY(180deg)"
             card.classList.remove("card-back")
             // Displays cards image
             displayImage(cardId)
