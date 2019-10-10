@@ -15,7 +15,7 @@ let game = {
 game.cardImageArray = shuffle(game.cardImageArray)
 
 // Event listener on the new game button that will reset the game 
-document.querySelector('.newGame').addEventListener("click", function (e) {
+document.querySelector(".newGame").addEventListener("click", function (e) {
     e.stopPropagation
 
     // Reset game state
@@ -35,7 +35,7 @@ document.querySelector('.newGame').addEventListener("click", function (e) {
 
 
 // Instructions button event listener
-document.querySelector('.instructionsButton').addEventListener("click", function (e) {
+document.querySelector(".instructionsButton").addEventListener("click", function (e) {
     let instructions = document.querySelector(".instructions")
     if (instructions.classList.contains("hidden")) {
         instructions.classList.remove("hidden")
