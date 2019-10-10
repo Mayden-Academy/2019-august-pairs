@@ -20,7 +20,8 @@ function isTurnLegit(cardId) {
         game.clicks++
         //check if the clicks property of the game object is equal to two
         if (game.clicks === 2) {//yes
-
+            // Updates number of turns 
+            game.turn++
             //reset clicks property of the game object to zero if turn over
             game.clicks = 0
             //call the checkMatch function
