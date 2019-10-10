@@ -1,3 +1,5 @@
+
+
 let game = {
     // Stores image numbers for the 16 cards (cardImageArray)
     cardImageArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
@@ -9,7 +11,16 @@ let game = {
     cardsTurn: [],
     // Stores the number of clicks in the current turn 0 - 2
     clicks: 0,
-    turn: 0
+    turn: 0,
+    timer: 0,
+    timerSwitch: 0,
+    gameFinished: false,
+    timerObject: function (){setInterval(function () {
+        if (game.gameFinished === false) {
+            game.timer++
+            document.querySelector('.timer').textContent = 'Timer: ' + game.timer + 's'
+        }
+    }, 1000)}
 }
 
 // Shuffles the image numbers
@@ -18,6 +29,22 @@ game.cardImageArray = shuffle(game.cardImageArray)
 // Event listener on the new game button that will reset the game 
 document.querySelector(".newGame").addEventListener("click", function(e) {
     e.stopPropagation
+    document.querySelector('.timer').textContent = 'Timer: 0'
+    document.querySelector(".cardContainer").classList.remove("hidden")
+    document.querySelector("#newGameText").classList.add("hidden")
+    if (game.matchedCards.length <= 16) {
+        if (game.timer > 0) {
+            game.timer = 0
+            game.gameFinished = false
+        } else {
+            if (game.timerSwitch === 0) {
+                game.timerObject()
+                game.timerSwitch = 1
+            }
+        }
+    } else {
+        clearInterval(game.timerObject)
+    }
 
     // Reset game state
     game.matchedCards = []
@@ -65,4 +92,6 @@ game.cards.forEach(function (card) {
         }
     })
 })
+
+
 

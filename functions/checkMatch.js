@@ -24,16 +24,14 @@ function checkMatch() {
         game.cardsTurn.forEach(function(card) {
             // Adds matched class to matching cards
             document.getElementById(card).classList.add("matched")
-            // Remove event listener
-            
         })
-
         if (game.matchedCards.length == 16) {
                 setTimeout(function() {
-                    alert("Geckcellent work! Want to geckgo again?")
-                }, 2)
-            }
-        
+                    alert("Geckcellent work! Completed in " + game.timer + " seconds and " + game.turn +  " turns. Want to geckgo again?")
+                }, 500)
+            game.gameFinished = true
+
+        }
     } else {
         game.cardsTurn.forEach(function(card) {
             // Adds delay to resetting cards
