@@ -9,17 +9,17 @@
 */
 function checkMatch() {
     // Getting the ID's of the cards from the turn cards array
-    card1Id = game.cardsTurn[0]
-    card2Id = game.cardsTurn[1]
+    let card1Id = game.cardsTurn[0]
+    let card2Id = game.cardsTurn[1]
 
     // Getting the cards image numbers from the cards array
-    card1Image = game.cardImageArray[card1Id]
-    card2Image = game.cardImageArray[card2Id]
+    let card1Image = game.cardImageArray[card1Id]
+    let card2Image = game.cardImageArray[card2Id]
 
     // Checking if the two cards images match
     if (card1Image === card2Image) {
         // Adds card ID's to the matched cards array
-        game.matchedCards.push(parseInt(card1Id), parseInt(card2Id))
+        game.matchedCards.push(card1Id,card2Id)
 
         game.cardsTurn.forEach(function (card) {
             // Adds matched class to matching cards
