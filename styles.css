@@ -30,14 +30,9 @@ button {
     color: red;
 }
 
-.score .timer {
-    float: left;
-}
-
-.instructions {
-    font-size: 1rem;
+.hidden {
     display: none;
- }
+}
   
 .cardContainer {
     width: 620px;
@@ -60,4 +55,8 @@ button {
 
 .card-back {
     background-image: url("images/cardBack.jpg");
+}
+
+.matched {
+    border: lawngreen solid 3px;
 }
