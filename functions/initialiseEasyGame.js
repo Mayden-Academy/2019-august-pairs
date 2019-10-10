@@ -7,19 +7,19 @@
 *   3. shuffle the array
 *
  */
-function initialiseHardGame (){
+function initialiseEasyGame (){
 
     //override the display property of the .extraCardContainer from 'none' to 'block'
-    document.querySelector(".extraCardContainer").style.display = "block"
+    document.querySelector(".extraCardContainer").style.display = "none"
 
     //override the width property of the .cardContainer from '620' to '920'
-    document.querySelector(".cardContainer").style.width = "1226px"
+    document.querySelector(".cardContainer").style.width = "620px"
 
     //override the number of cards that the game will be using
-    game.gameSizeAtStart = 32
+    game.gameSizeAtStart = 16
 
     //enlarge the  to 32 cards (16 pairs)
-    game.cardImageArray = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16]
+    game.cardImageArray = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8]
 
     //shuffle array
     shuffle (game.cardImageArray)
