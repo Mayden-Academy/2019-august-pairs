@@ -11,6 +11,7 @@ let game = {
     clicks: 0,
     turn: 0,
     timer: 0,
+    cardWinningBorder: null,
     timerSwitch: false,
     gameFinished: false,
     timerObject: function () {
@@ -36,9 +37,7 @@ document.querySelector(".newGameButton").addEventListener("click", function (e) 
     document.querySelector('.timer').textContent = 'Timer: 0'
     document.querySelector(".cardContainer").classList.remove("hidden")
     document.querySelector("#newGameText").classList.add("hidden")
-    document.querySelectorAll(".matched").forEach(function (card) {
-        card.style = ""
-    })
+    clearInterval(game.cardWinningBorder)
     if (game.matchedCards.length <= 16) {
         if (game.timer > 0) {
             game.timer = 0
