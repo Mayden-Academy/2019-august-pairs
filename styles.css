@@ -26,7 +26,11 @@ button {
     border: 2px solid black;
 }
 
-.newGame {
+#newGameText {
+    text-align: center;
+}
+
+.newGameButton {
     color: red;
 }
 

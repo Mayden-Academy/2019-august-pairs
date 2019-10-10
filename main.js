@@ -31,7 +31,7 @@ setInterval(function() {
 game.cardImageArray = shuffle(game.cardImageArray)
 
 // Event listener on the new game button that will reset the game 
-document.querySelector(".newGame").addEventListener("click", function(e) {
+document.querySelector(".newGameButton").addEventListener("click", function(e) {
     e.stopPropagation
     document.querySelector('.timer').textContent = 'Timer: 0'
     document.querySelector(".cardContainer").classList.remove("hidden")
