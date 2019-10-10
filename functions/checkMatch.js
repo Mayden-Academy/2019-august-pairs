@@ -25,7 +25,7 @@ function checkMatch() {
             // Adds matched class to matching cards
             document.getElementById(card).classList.add("matched")
         })
-        if (game.matchedCards.length == 16) {
+        if (game.matchedCards.length == game.gameSizeAtStart) {
 
             game.cardWinningBorder = setInterval(function () {
                 document.querySelectorAll(".matched").forEach(function (card) {
