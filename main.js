@@ -8,23 +8,26 @@ let game = {
     // Stores the card ID's of the cards active in the current turn
     cardsTurn: [],
     // Stores the number of clicks in the current turn 0 - 2
-    clicks: 0
+    clicks: 0,
+    turn: 0
 }
 
 // Shuffles the image numbers
 game.cardImageArray = shuffle(game.cardImageArray)
 
 // Event listener on the new game button that will reset the game 
-document.querySelector(".newGame").addEventListener("click", function (e) {
+document.querySelector(".newGame").addEventListener("click", function(e) {
     e.stopPropagation
 
     // Reset game state
     game.matchedCards = []
     game.clicks = 0
     game.cardsTurn = []
+    game.turn = 0
+    document.querySelector('.turnNumber').textContent=game.turn
 
     // Turn cards back over
-    game.cards.forEach(function (card) {
+    game.cards.forEach(function(card) {
         card.style = ""
         card.classList = "card card-back"
     })
@@ -35,7 +38,7 @@ document.querySelector(".newGame").addEventListener("click", function (e) {
 
 
 // Instructions button event listener
-document.querySelector(".instructionsButton").addEventListener("click", function (e) {
+document.querySelector(".instructionsButton").addEventListener("click", function(e) {
     let instructions = document.querySelector(".instructions")
     if (instructions.classList.contains("hidden")) {
         instructions.classList.remove("hidden")
@@ -46,7 +49,7 @@ document.querySelector(".instructionsButton").addEventListener("click", function
 
 //forEach loop that calls displayImage function when a card is clicked
 game.cards.forEach(function (card) {
-    card.addEventListener("click", function (event) {
+    card.addEventListener("click", function(event) {
         // Stops event listener affecting cards other than the clicked card
         event.stopImmediatePropagation()
         if (!(this.classList.contains("matched"))) {
@@ -58,6 +61,7 @@ game.cards.forEach(function (card) {
             displayImage(cardId)
             // Checks if card is valid for current turn
             isTurnLegit(cardId)
+            document.querySelector('.turnNumber').textContent=game.turn
         }
     })
 })

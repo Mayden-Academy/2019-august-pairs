@@ -22,7 +22,7 @@ html {
 button {
     float: left;
     height: 80px;
-    width: 50%;
+    width: 33%;
     border: 2px solid black;
 }
 
@@ -30,10 +30,31 @@ button {
     color: red;
 }
 
+.instructions {
+    font-size: 1rem;
+    display: block;
+ }
+
+.turnCounter {
+    float: left;
+    height: 80px;
+    width: 33%;
+    border: 2px solid black;
+    text-align: center;
+    padding: 24px;
+}
+.turnCounter p {
+    display: inline;
+}
+
+.score .timer {
+    float: left;
+}
+
 .hidden {
     display: none;
 }
-  
+
 .cardContainer {
     width: 620px;
     margin: 0 auto;
