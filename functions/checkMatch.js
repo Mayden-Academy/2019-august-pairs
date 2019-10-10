@@ -4,8 +4,8 @@ function checkMatch() {
     card2Id = game.cardsTurn[1]
 
     // Getting the cards image numbers from the cards array
-    card1Image = game.cardArray[card1Id]
-    card2Image = game.cardArray[card2Id]
+    card1Image = game.cardImageArray[card1Id]
+    card2Image = game.cardImageArray[card2Id]
 
     // Checking if the two cards images match
     if (card1Image === card2Image) {

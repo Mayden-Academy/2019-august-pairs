@@ -1,6 +1,6 @@
 let game = {
     // Stores image numbers for the 16 cards (cardImageArray)
-    cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
+    cardImageArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
     // Node list of all the card elements
     cards: document.querySelectorAll('.card'),
     // Array of the ID's of cards that have been matched
@@ -12,7 +12,7 @@ let game = {
 }
 
 // Shuffles the image numbers
-game.cardArray = shuffle(game.cardArray)
+game.cardImageArray = shuffle(game.cardImageArray)
 
 // Event listener on the new game button that will reset the game 
 document.querySelector('.newGame').addEventListener('click', function (e) {
@@ -30,7 +30,7 @@ document.querySelector('.newGame').addEventListener('click', function (e) {
     })
 
     // Reshuffles images
-    game.cardArray = shuffle(game.cardArray)
+    game.cardImageArray = shuffle(game.cardImageArray)
 })
 
 
