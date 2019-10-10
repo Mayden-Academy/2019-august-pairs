@@ -1,3 +1,18 @@
+/*
+* This function:
+*      1. stores the id of cards from cardsTurn array (the cards that are clicked in each turn)
+*      2. fetches the image array positions of the cards stored in 1.
+*      3. checks if the image array positions match and if so, adds cards' id to  matched cards array, adds matched class to
+*       those card elements and removes event listener from them
+*      4. if not matching a delay is added to resetting cards, gecko image is removed and card-back is reinstated
+*      5. cardsTurn is reset to start a new turn
+*
+* @param - ARRAY - cardsTurn - stores the cards clicked in a turn
+*
+* @param - ARRAY - cardImageArray - stores the gecko images
+*
+*/
+
 function checkMatch() {
     // Getting the ID's of the cards from the turn cards array
     card1Id = game.cardsTurn[0]
@@ -30,6 +45,6 @@ function checkMatch() {
             }, 250)
         })
     }
-    // Resets carsTurn
+    // Resets cardsTurn
     game.cardsTurn = []
 }
