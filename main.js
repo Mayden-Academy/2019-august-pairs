@@ -10,9 +10,9 @@ let game = {
     // Stores the number of clicks in the current turn 0 - 2
     clicks: 0,
     turn: 0,
-    timer: 0,
     //defines the number of cards that the game will be using
     gameSizeAtStart: 16,
+    timer: 0,
     timerSwitch: false,
     gameFinished: false,
     timerObject: function () {
