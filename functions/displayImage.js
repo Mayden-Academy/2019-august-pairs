@@ -13,6 +13,6 @@
 *
 */
 function displayImage(id) {
-    document.getElementById(id).style.backgroundImage = "url('images/gecko" + game.cardArray[id] + ".jpg')"
+    document.getElementById(id).style.backgroundImage = "url('images/gecko" + game.cardImageArray[id] + ".jpg')"
 }
 
