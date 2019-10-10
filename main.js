@@ -23,6 +23,7 @@ document.querySelector(".newGame").addEventListener("click", function(e) {
     game.matchedCards = []
     game.clicks = 0
     game.cardsTurn = []
+    game.turn = 0
 
     // Turn cards back over
     game.cards.forEach(function(card) {
