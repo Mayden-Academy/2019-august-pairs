@@ -25,6 +25,11 @@ function checkMatch() {
             // Adds matched class to matching cards
             document.getElementById(card).classList = "card matched"
             // Remove event listener
+            if (game.matchedCards.length == 16) {
+                setTimeout(function () {
+                    alert("Geckcellent work! Want to geckgo again?")
+                }, 250)
+            }
         })
         
     } else {
