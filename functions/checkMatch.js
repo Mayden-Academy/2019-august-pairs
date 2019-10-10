@@ -26,9 +26,14 @@ function checkMatch() {
             document.getElementById(card).classList.add("matched")
         })
         if (game.matchedCards.length == 16) {
+                setInterval(function() {
+                    document.querySelectorAll(".matched").forEach(function(card) {
+                        card.style.borderColor = "rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," +  Math.floor(Math.random() * 255) + ")"
+                })},62)
                 setTimeout(function() {
                     alert("Geckcellent work! Completed in " + game.timer + " seconds and " + game.turn +  " turns. Want to geckgo again?")
                 }, 500)
+                
             game.gameFinished = true
 
         }
