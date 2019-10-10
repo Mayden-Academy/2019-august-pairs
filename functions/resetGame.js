@@ -30,4 +30,5 @@ function resetGame() {document.querySelector('.timer').textContent = 'Timer: 0'
 
     // Reshuffles images
     game.cardImageArray = shuffle(game.cardImageArray)
+    clearInterval(game.cardWinningBorder)
 }
