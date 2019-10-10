@@ -1,4 +1,5 @@
-function resetGame() {document.querySelector('.timer').textContent = 'Timer: 0'
+function resetGame() {
+    document.querySelector('.timer').textContent = 'Timer: 0'
     document.querySelector(".cardContainer").classList.remove("hidden")
     document.querySelector("#newGameText").classList.add("hidden")
     if (game.matchedCards.length <= 16) {
