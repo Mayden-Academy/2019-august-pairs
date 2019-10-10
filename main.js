@@ -2,6 +2,7 @@ let game = {
     cardArray: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8],
     cards: document.querySelectorAll('.card'),
     turn: 0
+    matchedCards: []
 }
 
 game.cardArray = shuffle(game.cardArray)
@@ -18,10 +19,10 @@ document.querySelector('.newGame').addEventListener('click', function(e) {
 
 document.querySelector('.instructionsButton').addEventListener('click', function(e){
     let instructions = document.querySelector('.instructions')
-    if (instructions.style.display == "none") {
-        instructions.style.display = "block"
+    if (instructions.classList.contains("hidden")) {
+        instructions.classList.remove("hidden")
     } else {
-        instructions.style.display = "none"
+        instructions.classList.add("hidden")
     }
 })
 
@@ -32,6 +33,8 @@ game.cards.forEach(function(card) {
         let cardId = this.id
         card.classList = "card"
         displayImage(game.cardArray, cardId)
+        isTurnLegit(this.id)
         document.querySelector('.turnNumber').textContent=game.turn
+
     })
 })

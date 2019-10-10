@@ -47,6 +47,14 @@ button {
     display: inline;
 }
 
+.score .timer {
+    float: left;
+}
+
+.hidden {
+    display: none;
+}
+
 .cardContainer {
     width: 620px;
     margin: 0 auto;
@@ -68,4 +76,8 @@ button {
 
 .card-back {
     background-image: url("images/cardBack.jpg");
+}
+
+.matched {
+    border: lawngreen solid 3px;
 }

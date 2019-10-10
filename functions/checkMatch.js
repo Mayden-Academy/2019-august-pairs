@@ -24,6 +24,8 @@ function checkMatch(cardsArray, chosenCards) {
             alert("Geckcellent work my friend! Wanna geckgo again?")
         }
         disableCards(chosenCards)
+        //Adds a CSS style to a matched pair.
+        game.matchedCards.classList += " matched"
         return true
     }else{
         return false;
